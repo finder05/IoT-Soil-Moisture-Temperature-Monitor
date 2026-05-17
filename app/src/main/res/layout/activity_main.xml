@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ECEFF1"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🌱 Soil Sensor Monitor"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1B5E20"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Moisture Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💧 Soil Moisture"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#0277BD"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvMoisture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-- %"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#0277BD"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressMoisture"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#0277BD"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvMoistureStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: --"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#555555"/>
+    </LinearLayout>
+
+    <!-- Temperature Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌡️ Temperature"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#BF360C"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-- °C"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#BF360C"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressTemp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:max="60"
+            android:progress="0"
+            android:progressTint="#BF360C"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvTempStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: --"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#555555"/>
+    </LinearLayout>
+
+    <!-- Last Updated -->
+    <TextView
+        android:id="@+id/tvLastUpdated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last Updated: --"
+        android:textSize="13sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Control Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnStartMonitoring"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="▶ Start"
+            android:backgroundTint="#1B5E20"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnStopMonitoring"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="■ Stop"
+            android:backgroundTint="#B71C1C"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+</LinearLayout>
